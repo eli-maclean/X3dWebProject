@@ -4,19 +4,19 @@ class DBController {
 	private $user = "em07614";
 	private $password = "fPgejllt";
 	private $database = "em07614";
-	private $em07614;
+	private $conn;
 	
 	function __construct() {
-		$this->em07614 = $this->connectDB();
+		$this->conn = $this->connectDB();
 	}
 	
 	function connectDB() {
-		$em07614 = mysqli_connect($this->host,$this->user,$this->password,$this->database);
-		return $em07614;
+		$conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
+		return $conn;
 	}
 	
 	function runQuery($query) {
-		$result = mysqli_query($this->em07614,$query);
+		$result = mysqli_query($this->conn,$query);
 		while($row=mysqli_fetch_assoc($result)) {
 			$resultset[] = $row;
 		}		
@@ -25,7 +25,7 @@ class DBController {
 	}
 	
 	function numRows($query) {
-		$result  = mysqli_query($this->em07614,$query);
+		$result  = mysqli_query($this->conn,$query);
 		$rowcount = mysqli_num_rows($result);
 		return $rowcount;	
 	}
