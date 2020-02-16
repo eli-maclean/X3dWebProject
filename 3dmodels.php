@@ -80,32 +80,10 @@ nav ul li a:hover {
 color: 88ACFF;
 }
 
-.filterbox {
-		float: left;
-        list-style-type: none;
-       border: 2px solid black;
-        width: 240px;
-		height: 325px;
-    }
-	.rating > span:hover:before {
-   content: "\2605";
-   position: absolute;
-}
-.checked {
-  color: orange;
-  
 
-}
 
-.categorylarge, .categorysmall, .categorymedium, .ascending, .descending {
-	display: none;
-}
 
-#search {
-	width: 800;
 
-	
-}
 	
 	
 	
@@ -114,113 +92,18 @@ color: 88ACFF;
 <body>
     <nav>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="3dmodels.php?action=empty">3D Models</a></li>
-          <li><a href="manual.html">Manual</a></li>
-          <li><a href="upload.html">Upload</a></li>
-          <li><a href="login.html">Login</a></li> 
-          
+          <li><a href="3dmodels.php">Home</a></li> 
         </ul>
          </nav>
 		 
-<h1><i><center>Select Which 3D Models You Would Like to View<center></i></h1>
+<h1><i><center>Which 3D Model Would You Like to View?<center></i></h1>
     
-<center><form action="search3dmodels.php" method="POST" >
-<input id="search" name="search" type="text" placeholder="Categories (ie. vehicle)">
-<input id="submitbtn" type="submit" value="Search">
-</form></center>
 
 
-	
-	
-
-<ul id="filters" class="filterbox"> 
-<b>Size in Polygons</b>
-    <li>
-        <input type="checkbox" value="categorylarge" id="filter-categorylarge" />
-        <label for="filter-categorylarge">Large ( > 50,000)</label>
-    </li>
-	 <li>
-        <input type="checkbox" value="categorymedium" id="filter-categorymedium" />
-        <label for="filter-categorymedium">Medium (10,000-50,000)</label>
-    </li>
-	<li>
-        <input type="checkbox" value="categorysmall" id="filter-categorysmall" />
-        <label for="filter-categoryssmall">Small ( < 10,000)</label>
-    </li>
-	<br>
-<b>Average Rating</b>
-		<li>
-		 <input type="checkbox" value="categorylarge" id="filter-categorylarge" />
-
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-    </li>
-		<li>
-		 <input type="checkbox" value="categorylarge" id="filter-categorylarge" />
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-    </li>
-		<li>
-		 <input type="checkbox" value="categorylarge" id="filter-categorylarge" />
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-    </li>
-		<li>
-		 <input type="checkbox" value="categorylarge" id="filter-categorylarge" />
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-    </li>
-	<br>
-<b>Alphabetical</b>
-		<li>
-        <input type="checkbox" value="Ascending" id="filter-Ascending" />
-        <label for="filter-Ascending">Ascending</label>
-    </li>
-		<li>
-        <input type="checkbox" value="Descending" id="filter-Descending" />
-        <label for="filter-Descending">Descending</label>
-    </li>
-<br>
-
-	
-    <input type="checkbox" value="cell" class="hidden" checked />
-    <input type="checkbox" value="title" class="hidden" checked />
-    <input type="checkbox" value="thumbnail" class="hidden" checked />
-	
-	<button onclick="window.location.href = '3dmodels.php';">Reset</button>
-			<br>
-</ul>
-
-
-<script>
-
-        $("#filters :checkbox").click(function() {
-   $("div").hide();
-   $("#filters :checkbox:checked").each(function() {
-       $("." + $(this).val()).show();
-});
- });
-
-
-
-</script>
 		
 		
 <div class="allcategories"><?php
-	$product_array = $db_handle->runQuery("SELECT * FROM capstone");
+	$product_array = $db_handle->runQuery("SELECT * FROM models");
 	if (!empty($product_array)) { 
 		foreach($product_array as $key=>$value){
 	?>
@@ -232,93 +115,6 @@ color: 88ACFF;
 		}
 	}
 	?></div>
-
-<div class="categorysmall"><?php
-	$product_array = $db_handle->runQuery("SELECT DISTINCT * FROM capstone WHERE size = 'small'");
-	if (!empty($product_array)) { 
-		foreach($product_array as $key=>$value){
-	?>
-        <div class="cell">
-			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
-			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
-        </div>
-	<?php
-		}
-	}
-	?></div>
-      
-        <div class="categorylarge"><?php
-	$product_array = $db_handle->runQuery("SELECT DISTINCT * FROM capstone WHERE size = 'large'");
-	if (!empty($product_array)) { 
-		foreach($product_array as $key=>$value){
-	?>
-		<div class="cell">
-			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
-			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
-        </div>
-	<?php
-		}
-	}
-    ?></div>
-
-<div class="categorymedium"><?php
-	$product_array = $db_handle->runQuery("SELECT DISTINCT * FROM capstone WHERE size = 'medium'");
-	if (!empty($product_array)) { 
-		foreach($product_array as $key=>$value){
-	?>
-		<div class="cell">
-			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
-			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
-        </div>
-	<?php
-		}
-	}
-    ?></div>
-
-
-<div class="categorysearch"><?php
-	
-	$search = $_POST['search'];
-	$product_array = $db_handle->runQuery("SELECT  * FROM capstone WHERE size LIKE '%$search%' OR category LIKE '%$search%' OR name LIKE '%$search%' ");
-	if (!empty($product_array)) { 
-		foreach($product_array as $key=>$value){
-	?>
-		<div class="cell">
-			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
-			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
-        </div>
-	<?php
-		}
-	}
-	?></div>
-	
-<div class="Ascending"><?php
-	$product_array = $db_handle->runQuery("SELECT * FROM capstone ORDER BY name ASC");
-	if (!empty($product_array)) { 
-		foreach($product_array as $key=>$value){
-	?>
-        <div class="cell">
-			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
-			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
-        </div>
-	<?php
-		}
-	}
-?></div>
-
-<div class="Descending"><?php
-	$product_array = $db_handle->runQuery("SELECT * FROM capstone ORDER BY name DESC");
-	if (!empty($product_array)) { 
-		foreach($product_array as $key=>$value){
-	?>
-        <div class="cell">
-			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
-			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
-        </div>
-	<?php
-		}
-	}
-?></div>
 
 
     </body>
