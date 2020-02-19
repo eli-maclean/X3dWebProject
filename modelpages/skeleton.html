@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Skull Assembly X3D Model</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'></script>
+		<link rel='stylesheet' type='text/css' href='css/styles.css'/>
+		<link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'/>
+	</head>
+	<body style="background-color: #FAFAFA;">
+			<nav>
+				<ul>
+				  <li><a href="http://web-students.armstrong.edu/~em07614/test/3dmodels.php">Home</a></li> 
+				</ul>
+			</nav>
+		<div class="center">
+            <div class="sidebar">
+				<h2>Mouse Controls:</h2>
+        <table id="mouseTable">
+        <tr id="mouseLeftRow"><td><img src="MouseImages/Mouse_Left.png"></img></td><td id="mouseLeft">Rotate</td></tr>
+        <tr id="mouseRightRow"><td><img src="MouseImages/Mouse_Right.png"></img></td><td id="mouseRight">Zoom</td></tr>
+        <tr id="mouseWheelScrollRow"><td><img src="MouseImages/Mouse_Wheel_Scroll.png"></img></td><td id="mouseWheelScroll">Zoom</td></tr>
+        <tr id="mouseWheelPressRow"><td><img src="MouseImages/Mouse_Wheel_Press.png"></img></td><td id="mouseWheelPress">Pan</td></tr>
+        </table>
+			</div>					
+			<div class="maxwrap">
+				<div class="x3d">
+					<x3d id="skullscene">
+						<scene onload="onLoad()">
+							<Background skyColor='(.067,.067,.067)'></Background> 
+                            <Inline nameSpaceName="skeleton" mapDEFToID="true" url="x3d/skeleton/SkeletonCompleteNormals
+                            .x3d"></Inline>
+						</scene>
+					</x3d>					
+                </div>
+            </div>
+            
+        </div>
+        
+	</body>
+	
+</html>
