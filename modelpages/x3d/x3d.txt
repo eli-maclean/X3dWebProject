@@ -1,0 +1,4 @@
+This folder should contain a single containing folder for each x3d that is to be displayed. 
+Please follow the following naming convention for contating folders:
+{body part}{orientation(left/right/upper/lower/etc)}{any additional descriptors}
+NOTE: each word in the folder name should start with an upper case. EX: FolderName
