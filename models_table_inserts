@@ -10,5 +10,5 @@ INSERT INTO `models` (`id`,`name`,`thumbnail`,`adr`) VALUES
   (8,'Left Hand','thumbnails/handleft.png','modelpages/hand_left.html'),
   (9,'Left Humerus','thumbnails/humerusleft.png','modelpages/humerus_left.html'),
   (10,'Left Radius/Ulna','thumbnails/radiusulnaleft.png','modelpages/radiusUlna_left.html'),
-  (11,'Skeleton','thumbnails/skeleton.png','modelpages/skeleton.html');
+  (11,'Skeleton','thumbnails/skeleton.png','modelpages/skeleton.html'),
   (12,'Left Tibia/Fibula','thumbnails/tibifibulaleft.png','modelpages/tibiaFibula_left.html');
