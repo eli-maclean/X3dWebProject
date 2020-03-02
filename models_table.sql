@@ -29,4 +29,4 @@ INSERT INTO `models` (`id`,`name`,`thumbnail`,`adr`,`type`) VALUES
   (15,'Skull','thumbnails/skull.png','modelpages/skull.html','decomposable'),
   (16,'Teeth','thumbnails/teeth.png','modelpages/bones_teeth.html','basic'),
   (17,'Left Tibia/Fibula','thumbnails/tibiafibulaleft.png','modelpages/tibiaFibula_left.html','basic'),
-  (18,'Right Tibia/Fibula','thumbnails/tibiafibularight.png','modelpages/tibiafibula_right.html','basic')  ;
+  (18,'Right Tibia/Fibula','thumbnails/tibiafibularight.png','modelpages/tibiaFibula_right.html','basic')  ;
