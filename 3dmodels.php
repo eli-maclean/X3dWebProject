@@ -111,13 +111,13 @@ color: 88ACFF;
 		<div class="cell">
 			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
 			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
-        </div>
-		<br>
+	</div>
 	<?php
 			}
 		}
 	}
-	?></div>
+	?></div> 
+	<hr>
 	<div class="allcategories"><?php
 	$product_array = $db_handle->runQuery("SELECT * FROM models");
 	if (!empty($product_array)) {
@@ -128,12 +128,12 @@ color: 88ACFF;
 			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
 			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
         </div>
-		<br>
 	<?php
 			}
 		}
 	}
 	?></div>
+	<hr>
 	<div class="allcategories"><?php
 	$product_array = $db_handle->runQuery("SELECT * FROM models");
 	if (!empty($product_array)) {
@@ -143,8 +143,7 @@ color: 88ACFF;
 		<div class="cell">
 			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
 			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
-        </div>
-		<br>
+		</div>
 	<?php
 			}
 		}
