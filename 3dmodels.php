@@ -104,18 +104,51 @@ color: 88ACFF;
 		
 <div class="allcategories"><?php
 	$product_array = $db_handle->runQuery("SELECT * FROM models");
-	if (!empty($product_array)) { 
+	if (!empty($product_array)) {
 		foreach($product_array as $key=>$value){
+			if ($product_array [$key]["type"]=="basic"){
 	?>
 		<div class="cell">
 			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
 			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
         </div>
+		<br>
 	<?php
+			}
 		}
 	}
 	?></div>
-
-
+	<div class="allcategories"><?php
+	$product_array = $db_handle->runQuery("SELECT * FROM models");
+	if (!empty($product_array)) {
+		foreach($product_array as $key=>$value){
+			if ($product_array [$key]["type"]=="decomposable"){
+	?>
+		<div class="cell">
+			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
+			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
+        </div>
+		<br>
+	<?php
+			}
+		}
+	}
+	?></div>
+	<div class="allcategories"><?php
+	$product_array = $db_handle->runQuery("SELECT * FROM models");
+	if (!empty($product_array)) {
+		foreach($product_array as $key=>$value){
+			if ($product_array [$key]["type"]=="volume"){
+	?>
+		<div class="cell">
+			<div class="thumbnail"><a href="<?php echo $product_array[$key]["adr"]; ?>"><img src="<?php echo $product_array[$key]["thumbnail"]; ?>"></a></div>
+			<div class="title"><?php echo $product_array[$key]["name"]; ?></div>
+        </div>
+		<br>
+	<?php
+			}
+		}
+	}
+	?></div>
     </body>
 </html>
