@@ -30,4 +30,8 @@ INSERT INTO `models` (`id`,`name`,`thumbnail`,`adr`,`type`) VALUES
   (16,'Skull','thumbnails/skull.png','modelpages/skull.html','decomposable'),
   (17,'Teeth','thumbnails/teeth.png','modelpages/bones_teeth.html','basic'),
   (18,'Left Tibia/Fibula','thumbnails/tibiafibulaleft.png','modelpages/tibiaFibula_left.html','basic'),
-  (19,'Right Tibia/Fibula','thumbnails/tibiafibularight.png','modelpages/tibiaFibula_right.html','basic')  ;
+  (19,'Right Tibia/Fibula','thumbnails/tibiafibularight.png','modelpages/tibiaFibula_right.html','basic'),
+  (20,'Volumetric Abdomen','thumbnails/abdomenvol.png','modelpages/abdomen_volumetric.html','volume'),
+  (21,'Volumetric Body','thumbnails/bodyvol.png','modelpages/body_volumetric.html','volume'),
+  (22,'Volumetric Brain','thumbnails/brainvol.png','modelpages/brain_volumetric.html','volume'),
+  (23,'Volumetric Skull','thumbnails/skullvol.png','modelpages/skull_volumetric.html','volume')  ;
