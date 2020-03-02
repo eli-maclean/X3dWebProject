@@ -12,7 +12,7 @@ CREATE TABLE `models` (
 --dump table data
 INSERT INTO `models` (`id`,`name`,`thumbnail`,`adr`,`type`) VALUES
   (0,'Skull','thumbnails/skull.png','modelpages/skull.html','decomposable'),
-  (1,'Brain','thumbnails/Brain.png','modelpages/brain.html','decomposable'),
+  (1,'Brain','thumbnails/brain.png','modelpages/brain.html','decomposable'),
   (2,'Head','thumbnails/head.png','modelpages/bones_head.html','basic'),
   (3,'Teeth','thumbnails/teeth.png','modelpages/bones_teeth.html','basic'),
   (4,'Left Femur','thumbnails/femurleft.png','modelpages/femur_left.html','basic'),
