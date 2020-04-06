@@ -77,11 +77,11 @@ $db_handle = new DBController();
 	</head>
 	<body>
 		<nav>
-			<ul><!-- Just change the link to whichever folder your using -->
-			  <li><a href="http://web-students.armstrong.edu/~lf03747/X3dWebProject-master-test/X3dwebprojecthome.html">Home</a></li>
-			  <li><a href="http://web-students.armstrong.edu/~lf03747/X3dWebProject-master-test/3dmodeltypes/basic.php">Basic</a></li>
-			  <li><a href="http://web-students.armstrong.edu/~lf03747/X3dWebProject-master-test/3dmodeltypes/decomposable.php">Decomposable</a></li>
-			  <li><a href="http://web-students.armstrong.edu/~lf03747/X3dWebProject-master-test/3dmodeltypes/volume.php">Volume</a></li>
+			<ul>
+			  <li><a href="X3dwebprojecthome.html">Home</a></li>
+			  <li><a href="basic.php">Basic</a></li>
+			  <li><a href="decomposable.php">Decomposable</a></li>
+			  <li><a href="volume.php">Volume</a></li>
 			</ul>
 		</nav>
 			 
