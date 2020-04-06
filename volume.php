@@ -78,7 +78,7 @@ $db_handle = new DBController();
 	<body>
 		<nav>
 			<ul><!-- Just change the link to whichever folder your using -->
-			  <li><a href="X3dwebprojecthome.html">Home</a></li>
+			  <li><a href="3dmodels.php">Home</a></li>
 			  <li><a href="basic.php">Basic</a></li>
 			  <li><a href="decomposable.php">Decomposable</a></li>
 			  <li><a href="volume.php">Volume</a></li>
