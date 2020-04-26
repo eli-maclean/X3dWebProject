@@ -1,0 +1,183 @@
+body {
+	background-color: #212831;
+}
+
+p {
+	text-indent: 50px;
+	font-family: arial;
+}
+
+p.or {
+	margin-top: 0px;
+	text-indent: 0px;
+	font-family: arial;
+	word-spacing: 6px;
+}
+
+p.contact {
+	text-indent: 0px;
+	font-family: arial;
+	word-spacing: 6px;
+}
+
+h2 {
+	color: #36414e;
+	font-family: arial;
+	text-transform: uppercase;
+} 
+
+h3 {
+	color: #000000;
+	font-family: arial;
+}
+
+h4 {
+	color: #ffffff;
+	font-family: arial;
+}
+
+table {
+	border: 2px solid #7b5567;
+	background-color: #cacdd0;
+}
+
+td {
+	border: 2px solid #7b5567;
+}
+
+tr {
+	border: 2px solid #7b5567;
+}
+
+table.title {
+	width: 1012px;
+}
+
+table.cad {
+	border: 0px solid #cacdd0;
+}
+
+td.cad {
+	background-color: #777777;
+}
+
+table.mpg { 
+	border: 0px solid #FFFFFF;
+	width: 60%;
+	background-color: #ffffff;
+}
+
+table.wrt {
+	border: 0px solid #FFFFFF;
+	width: 900px;
+}
+
+td.wrt {
+	padding: 10;
+	background-color: #4e3641;
+    border: 3px solid #7b5567;
+    width:20%;
+	text-align: center;
+}
+
+a.wrt {
+	color: white;
+	font-family: arial;
+	text-decoration: none;
+}
+
+td.wrt:hover {
+	background-color: #36414e;
+	border: 3px solid #55677b;
+	text-align: center;
+}
+
+td.wrs {
+	background-color: #36414e;
+	border: 3px solid #55677b;
+	text-align: center;
+}
+
+table.lim {
+	border: 0px solid #FFFFFF;
+	width: 1012px;
+	background-color: #cacdd0;
+	padding: 30;
+}
+
+button.fake {
+	background-color: #cacdd0;
+	transition-duration: 0.5s;
+}
+
+.slider {
+	color: 7b5567;
+	background-color: #cacdd0;
+	transition-duration: 0.5s;
+}
+
+.slider:hover {
+	color: white;
+	background-color: #36414e;
+	opacity: 1;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button.fake:hover {
+	color: white;
+	background-color: #36414e;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.cc {
+	width: 13px;
+    height: 13px;
+    overflow: hidden;
+	white-space: nowrap;
+}
+
+.cc img {
+	width: 125%;
+    height: 125%;
+}
+.center {
+	margin: auto;
+	padding: 10px;
+	border: 1px solid black;
+	overflow: hidden;
+	width: 1000px;
+	overflow: hidden;
+	margin-bottom: 30px;
+	background: #222;
+	border-radius: 10px 10px 10px 10px;
+	position: relative;
+}
+.sidebar {
+	float: right;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 200px;
+	position: static;
+	display: block;
+}
+#skullScene {
+	position: relative;
+	border: 1px solid white;
+	width: 800px;
+	height: 700px;
+}
+.maxwrap {
+	float: left;
+	margin: auto;
+	width: 400px;
+	height: 500px;
+}
+.x3d {
+    float: left;
+	overflow: hidden;
+	border: 1px solid black;
+	display: block;
+	position: absolute;
+	top: 50%; left: 43%;
+	transform: translate(-57%,-50%);
+}
